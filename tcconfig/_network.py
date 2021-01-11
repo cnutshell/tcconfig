@@ -42,6 +42,9 @@ def _read_iface_speed(tc_device):
 
 
 def get_upper_limit_rate(tc_device):
+    # skip upper limit rate
+    return _get_iproute2_upper_limite_rate()
+
     if typepy.is_null_string(tc_device):
         return _get_iproute2_upper_limite_rate()
 
